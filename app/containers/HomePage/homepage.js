@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import Loader from 'react-loader-spinner';
 import Article from 'components/article';
 
@@ -20,6 +21,11 @@ class HomePage extends Component {
       <Article document={article} />
     );
   }
+}
+
+HomePage.propTypes = {
+  fetchArticle: PropTypes.func.isRequired,
+  content: PropTypes.object,
 }
 
 export default HomePage;
